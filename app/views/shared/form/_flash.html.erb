@@ -1,0 +1,13 @@
+
+<!-- 新增成功或失敗 -->
+<!-- 判斷是成功還是失敗 -->
+<% [:notice , :alert].each do |t| %>
+    <% if flash[t] %>
+        <!-- 套用css -->
+        <div class="flash flash-<%= t %>">
+            <!-- 選染成功或失敗文字 -->
+            <%= flash[t] %>
+            <button>X</button>
+        </div>
+    <% end %>
+<% end %>

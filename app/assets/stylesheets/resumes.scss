@@ -1,3 +1,82 @@
-// Place all the styles related to the resumes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// // Place all the styles related to the resumes controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: https://sass-lang.com/
+// .resume-container {
+//     display: grid;
+//     grid-template-columns: repeat(1, 1fr);
+//     grid-gap: 15px;
+    
+ 
+//     .resume-card {
+//       border: 1px solid #888;
+//       border-radius: 10px;
+//       box-shadow: 5px 5px rgb(121, 85, 93);
+//       padding: 10px;
+//       display: flex;
+//       align-items: center;
+//       &hover{
+
+//       }
+ 
+//       header {
+//         .cover {
+//           img {
+//             border-radius: 10px;
+//             margin-right: 10px;
+//           }
+//         }
+//       }
+ 
+//       .info {
+//         .basic-info {
+//           display: flex;
+//           justify-content: space-between;
+//           align-items: center;
+ 
+//           .username {
+//             font-size: medium;
+//           }
+ 
+//           .location {
+//           }
+//         }
+ 
+//         .intro {
+//           a{
+//             color: #000;
+//           }
+          
+//         }
+//       }
+ 
+//       footer {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         margin-top: 20px;
+ 
+//         .update-time {
+//         }
+//         .functions {
+//           .btn {
+//             text-decoration: none;
+//             padding: 4px 8px;
+//             color: white;
+//             background-color: green;
+ 
+//             &:hover {
+//               background-color: lighten(green, 5%);
+//             }
+//           }
+ 
+//           .btn-danger {
+//             background-color: red;
+ 
+//             &:hover {
+//               background-color: lighten(red, 15%);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }

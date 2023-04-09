@@ -18,6 +18,7 @@ main {
     align-items: center;
     justify-content: space-between;
     background-color: rgb(121, 85, 93);
+
     padding: 20px 10px;
     a{
         color: azure;
@@ -32,5 +33,18 @@ main {
                 color: black;
             }
         }
+    }
+  }
+  .flash{
+    padding: 10px;
+    background-color: #45dd61;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    button{
+        border: none;
+        background-color: #45dd61;
+        color: #fff;
+        font-size: 20px;
     }
   }

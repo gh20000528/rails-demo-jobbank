@@ -1,0 +1,26 @@
+
+<h1><%= @resume.name %> 履歷</h1>
+
+<section class="grid grid-cols-12 gap-2">
+  <section class="col-span-8">
+    <article>
+      <h3 class="font-bold">簡介</h3>
+      <%= @resume.intro %>
+    </article>
+  </section>
+  <aside class="col-span-4">
+    <h2 class="text-lg font-bold">評論</h2>
+    <%= form_with(model: @comment, url: resume_comments_path(@resume) , local: false) do |form| %>
+      <%= form.text_area :content,
+                          class: 'w-full rounded', 
+                          rows: 4 ,
+                          data:{
+                            action: 'input->comment-from#input'
+                          }%>
+      <%= form.submit "新增評論", disabled: true, class: 'btn btn-disable',  data: {comment_form_target: 'button'}%>
+    <% end %>
+    <section class="comment-list mt-2">
+      <%= render @comments %>
+    </section>
+  </aside>
+</section>

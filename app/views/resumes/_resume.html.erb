@@ -1,0 +1,41 @@
+<section class="resume-card">
+    <header>
+      <div class="cover">
+        <%= link_to resume_path(resume) do%>
+         <img src="https://picsum.photos/200">
+        <% end %>
+      </div>
+    </header>
+ 
+    <section class="info">
+      <div class="basic-info">
+        <!-- 渲染resume名字 -->
+        <h2 class="username"><%= resume.name %></h2>
+        <!-- 渲染resume city -->
+        <address class="location"><%= resume.city %></address>
+      </div>
+      <article class="intro truncate">
+        <!-- 擷取文章75個字 -->
+        <%= link_to resume.intro&.truncate(75),resume_path(resume) %>
+      </article>
+        <footer>
+        <time class="update-time"><%= format_date(resume.updated_at) %></time>
+        <div class="functions">
+          <!-- 跳轉 編輯 副本 刪除 -->
+          <% if policy(resume).new? %>
+            <%= link_to '編輯', edit_resume_path(resume), class: 'btn' %>
+            <%= link_to '建立副本', '#', class: 'btn' %>
+            <%= link_to '刪除',resume_path(resume),
+                              class: 'btn btn-danger',
+                              method: 'delete',
+                              data: {confirm: '確認刪除'}
+                              %>
+          
+          <% end %>
+        </div>
+        </footer>
+    </section>
+ 
+    
+ 
+  </section>

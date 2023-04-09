@@ -2,9 +2,23 @@
       <%= link_to 'LOGO' , root_path %>
 
       <ul>
-        <!-- <li><a href="<%= about_path%>">關於</a></li> -->
-        <li><%= link_to '新增履歷', new_resumes_path %></li>
+        <% if user_signed_in? %>
+          <li><%= current_user.email%></li>
+          <li><%= link_to '登出', sessions_path, method: 'delete' %>        
+        <% else %>
+          <li><%= link_to '註冊' , sign_up_users_path %></li>
+          <li><%= link_to '登入' , sign_in_users_path %></li>
+
+        
+        <% end %>
+        
+
+
+        
+        <li><%= link_to '履歷列表', resumes_path %></li>
         <li><%= link_to '關於', about_path %></li>
         <li><%= link_to '聯絡', contact_path %></li> 
       </ul>
     </nav>
+
+    
